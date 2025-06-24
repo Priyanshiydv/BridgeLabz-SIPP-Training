@@ -1,0 +1,27 @@
+# NetBeans files
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# VS Code
+.vscode/
+
+# Maven
+/target/
+
+# Gradle
+.gradle/
+build/
+
+# Java build tool wrappers
+gradlew
+gradlew.bat
+
+# Others
+*.swp
+*.bak
+*.tmp
+
