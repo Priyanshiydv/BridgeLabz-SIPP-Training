@@ -1,0 +1,28 @@
+class TaskOrganizer {
+    LinkedHashMap<Integer, String> tasks
+    int taskIdCounter = 1
+
+    method addTask(description) {
+        tasks.put(taskIdCounter, description)
+        taskIdCounter++
+    }
+
+    method removeTask(taskId) {
+        tasks.remove(taskId)
+    }
+
+    method viewTasks() {
+        for each (id, desc) in tasks
+            print id + " → " + desc
+    }
+}
+
+// Example run
+main() {
+    TaskOrganizer org
+    org.addTask("Check emails")
+    org.addTask("Prepare sales report")
+    org.addTask("Call client")
+    org.removeTask(2)
+    org.viewTasks()
+}

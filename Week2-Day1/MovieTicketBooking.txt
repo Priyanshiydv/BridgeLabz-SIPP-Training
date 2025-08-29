@@ -1,0 +1,52 @@
+// Ticket class
+class Ticket {
+    String movieName;
+    String seatNumber;
+    double price;
+    boolean isBooked;
+}
+
+// Theatre class
+class Theatre {
+    list of availableSeats
+    list of scheduledMovies
+
+    method issueTicket(movieName, seatNumber) {
+        if (seatNumber is available) {
+            create new Ticket
+            mark seat as booked
+            return ticket
+        } else {
+            print "Seat not available."
+        }
+    }
+
+    method cancelTicket(ticket) {
+        mark ticket.seatNumber as available
+        ticket.isBooked = false
+        print "Ticket cancelled."
+    }
+}
+
+// Customer class
+class Customer {
+    String name
+
+    method bookTicket(theatre, movie, seat) {
+        Ticket t = theatre.issueTicket(movie, seat)
+        if (t != null) print "Booking successful."
+    }
+
+    method cancelTicket(theatre, ticket) {
+        theatre.cancelTicket(ticket)
+    }
+}
+
+// Example run
+main() {
+    Theatre t
+    Customer c(name="Ravi")
+
+    Ticket booked = c.bookTicket(t, "Avengers: Endgame", "A12")
+    c.cancelTicket(t, booked)
+}

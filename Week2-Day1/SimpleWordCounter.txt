@@ -1,0 +1,20 @@
+class WordCounter {
+    method countWords(text) {
+        normalize text (lowercase, remove punctuation)
+        split into words
+        Map<String, Integer> wordCount
+
+        for each word in words {
+            increment wordCount[word]
+        }
+
+        sort wordCount by value (frequency)
+        print sorted result
+    }
+}
+
+// Example run
+main() {
+    WordCounter wc
+    wc.countWords("The news today is about the rise in technology trends.")
+}

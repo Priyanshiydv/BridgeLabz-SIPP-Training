@@ -1,0 +1,46 @@
+// Base class
+class User {
+    String username;
+    String password;
+
+    method login() {
+        print "Default login process..."
+    }
+}
+
+// Derived class: Student
+class Student extends User {
+    boolean isRegistered;
+    boolean isEnrolled;
+
+    override method login() {
+        if (credentials are valid AND isRegistered == true AND isEnrolled == true) {
+            print "Student login successful. Show available exams."
+        } else {
+            print "Student login failed."
+        }
+    }
+}
+
+// Derived class: Admin
+class Admin extends User {
+    boolean isStaff;
+    boolean hasPrivileges;
+
+    override method login() {
+        if (credentials are valid AND isStaff == true AND hasPrivileges == true) {
+            print "Admin login successful. Show exam management tools."
+        } else {
+            print "Admin login failed."
+        }
+    }
+}
+
+// Example run
+main() {
+    create Student s(username="john123", password="1234", registered=true, enrolled=true)
+    s.login()
+
+    create Admin a(username="admin01", password="admin", staff=true, privileges=true)
+    a.login()
+}

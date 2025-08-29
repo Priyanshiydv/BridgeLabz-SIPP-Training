@@ -1,0 +1,39 @@
+// Node for LinkedList
+class Node {
+    String stopName
+    Node next
+}
+
+// LinkedList representing bus route
+class BusRoute {
+    Node head
+
+    method insertStop(afterStop, newStop) {
+        find afterStop
+        insert newStop node after it
+    }
+
+    method removeStop(stopName) {
+        find node with stopName
+        remove it from linked list
+    }
+
+    method searchStop(stopName) {
+        traverse list
+        if stop found -> print "Stop exists"
+        else -> print "Stop not found"
+    }
+
+    method displayRoute() {
+        print all stops in order
+    }
+}
+
+// Example run
+main() {
+    BusRoute route
+    route.insertStop("City Mall", "University")
+    route.removeStop("Hospital")
+    route.searchStop("Airport")
+    route.displayRoute()
+}
